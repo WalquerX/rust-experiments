@@ -1,0 +1,29 @@
+[package]
+name = "sc-cli-error-size"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+# Versions copied from the integritee-node 1.18.8 workspace root.
+# polkadot-stable2503-6.
+[dependencies]
+clap = { version = "4.5.1", features = ["derive"] }
+codec = { package = "parity-scale-codec", version = "3.6.5" }
+hex = "0.4.3"
+sc-cli = "0.52.0"
+sc-keystore = "35.0.0"
+sc-network = "0.50.1"
+sc-service = "0.51.0"
+sc-telemetry = "28.1.0"
+sp-blockchain = "39.0.0"
+sp-consensus = "0.42.0"
+sp-core = { version = "36.1.0", features = ["std"] }
+sp-inherents = { version = "36.0.0", features = ["std"] }
+sp-keystore = "0.42.0"
+
+# for the sc_network::error::Error payloads
+litep2p = "0.9.5"
+sc-network-types = "0.16.0"
+
+# Not in the node workspace root; it comes in transitively.
+substrate-prometheus-endpoint = "0.17.7"
